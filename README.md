@@ -1,7 +1,3 @@
-<div align="center">
-    <img alt="DynAMoND Logo" src="DynAMoND Logo.png" height=50>
-</div>
-
 ## Introduction
 
 The [DynAMoND](https://dynamond.eu/) study (Dynamics of Affect Modulation in Neurodevelopmental Disorders) is an international research project investigating how affect dynamics differ across ADHD, bipolar disorder, borderline personality disorder, and healthy controls. It follows over 400 participants at study centers in Bergen, Frankfurt, Geneva, Barcelona and Brescia for one year. The study uses innovative methods such as digital phenotyping, smartphone‑based e-diaries, and accelerometry across this large cohort to capture affective patterns over time.
