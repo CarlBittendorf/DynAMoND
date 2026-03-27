@@ -1,0 +1,100 @@
+data_config_version = 0
+uuid = "a3f1d331-0ba8-4427-9fce-63e31b5821ae"
+name = "Weather"
+plugins = ["store", "defaults", "memorise"]
+
+[config.defaults.storage._]
+checksum = "auto"
+
+[["DynAMoND Assignments"]]
+uuid = "8e47114f-eafe-45b3-a3ec-fab0fc0d735b"
+
+    [["DynAMoND Assignments".storage]]
+    driver = "filesystem"
+    checksum = "k12:07f55cab57a89b6e8292b6d897488e64"
+    path = "/Users/carlbittendorf/Documents/Projects/AmbulatoryAssessmentDatasets/DynAMoND/clean/DynAMoND Assignments.csv"
+    type = ["IO", "Array{UInt8,1}", "String", "FilePath"]
+
+    [["DynAMoND Assignments".loader]]
+    driver = "csv"
+
+[["DynAMoND Bergen Forms"]]
+uuid = "4d05e6c8-b028-4408-a715-91d79b9f692f"
+
+    [["DynAMoND Bergen Forms".loader]]
+    driver = "julia"
+    path = "scripts/forms.jl"
+    type = "DataFrames.DataFrame"
+
+        ["DynAMoND Bergen Forms".loader.arguments]
+        "data#DynAMoND Forms" = "📇DATASET<<DynAMoND Forms::DataFrames.DataFrame>>"
+
+[["DynAMoND Bergen Locations"]]
+uuid = "430a5499-b039-4d05-b23f-82e36c997fb8"
+
+    [["DynAMoND Bergen Locations".loader]]
+    driver = "julia"
+    path = "scripts/locations.jl"
+    type = "DataFrames.DataFrame"
+
+        ["DynAMoND Bergen Locations".loader.arguments]
+        "data#DynAMoND Assignments" = "📇DATASET<<DynAMoND Assignments::DataFrames.DataFrame>>"
+        "data#DynAMoND Bergen Forms" = "📇DATASET<<DynAMoND Bergen Forms::DataFrames.DataFrame>>"
+        "data#DynAMoND Connections" = "📇DATASET<<DynAMoND Connections::DataFrames.DataFrame>>"
+        "data#DynAMoND m-Path Locations" = "📇DATASET<<DynAMoND m-Path Locations::DataFrames.DataFrame>>"
+        "data#DynAMoND movisensXS Mobile Sensing" = "📇DATASET<<DynAMoND movisensXS Mobile Sensing::Dict{String,IO}>>"
+
+[["DynAMoND Connections"]]
+uuid = "2a4c9bee-ff94-4140-bb0c-8c3376e2ee17"
+
+    [["DynAMoND Connections".storage]]
+    driver = "filesystem"
+    checksum = "k12:586ba334944e8e15a80c922e3c4ad309"
+    path = "/Users/carlbittendorf/Documents/Projects/AmbulatoryAssessmentDatasets/DynAMoND/clean/DynAMoND Connections.csv"
+
+    [["DynAMoND Connections".loader]]
+    driver = "csv"
+
+[["DynAMoND Forms"]]
+uuid = "eb846ac7-9930-4d28-885d-d2b2c8c53679"
+
+    [["DynAMoND Forms".storage]]
+    driver = "filesystem"
+    checksum = "k12:49b83cc3bfb63b41fb689533fa41cf35"
+    path = "/Users/carlbittendorf/Documents/Projects/AmbulatoryAssessmentDatasets/DynAMoND/clean/DynAMoND Forms.arrow"
+
+    [["DynAMoND Forms".loader]]
+    driver = "arrow"
+
+[["DynAMoND m-Path Locations"]]
+uuid = "2fb1bf2c-02fb-4cb8-84d0-ab09505506f6"
+
+    [["DynAMoND m-Path Locations".storage]]
+    driver = "filesystem"
+    checksum = "k12:7b405028a87fa825dbf5ba4721e0ea3e"
+    path = "/Users/carlbittendorf/Documents/Projects/AmbulatoryAssessmentDatasets/DynAMoND/clean/DynAMoND m-Path Locations.csv"
+
+    [["DynAMoND m-Path Locations".loader]]
+    driver = "csv"
+
+[["DynAMoND m-Path Mobile Sensing"]]
+uuid = "a7b84421-92ac-4a6d-a976-c0ad03dbc4af"
+
+    [["DynAMoND m-Path Mobile Sensing".storage]]
+    driver = "filesystem"
+    checksum = "k12:194b254560d211202f483e11af80f1b6"
+    path = "/Users/carlbittendorf/Documents/Projects/AmbulatoryAssessmentDatasets/DynAMoND/raw/DynAMoND m-Path Mobile Sensing.zip"
+
+    [["DynAMoND m-Path Mobile Sensing".loader]]
+    driver = "zip"
+
+[["DynAMoND movisensXS Mobile Sensing"]]
+uuid = "06de24ca-66a2-4e6a-9789-38f9a3005fad"
+
+    [["DynAMoND movisensXS Mobile Sensing".storage]]
+    driver = "filesystem"
+    checksum = "k12:2cc6cf739f17d133ea8bce11d1a1c4a6"
+    path = "/Users/carlbittendorf/Documents/Projects/AmbulatoryAssessmentDatasets/DynAMoND/raw/DynAMoND movisensXS Mobile Sensing.zip"
+
+    [["DynAMoND movisensXS Mobile Sensing".loader]]
+    driver = "zip"

@@ -1,0 +1,11 @@
+[deps]
+AmbulatoryAssessmentAnalysis = "562e0ae9-293a-420f-a40f-ca28bb40a5c4"
+Arrow = "69666777-d1a9-59fb-9406-91d4454c9d45"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+Chain = "8be319e6-bccf-4806-a6f7-6fae938471bc"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+DataToolkit = "dc83c90b-d41d-4e55-bdb7-0fc919659999"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+GeoArtifacts = "2a3f1dca-97a5-4513-bfd8-b69f0106a87e"
+GeoStats = "dcc97b0b-8ce5-5539-9008-bb190f959ef6"
+KangarooTwelve = "2a5dabf5-6a39-42aa-818d-ce8a58d1b312"
